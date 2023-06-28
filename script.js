@@ -1,0 +1,171 @@
+mapboxgl.accessToken = 'pk.eyJ1IjoiYmVuY2hzcG90dGVycyIsImEiOiJjbGJrdnAycXQwMW1rM25waXF1dHQ4djRhIn0.k00FDSeJrdDFoV_tMw7tLQ';
+    const map = new mapboxgl.Map({
+        container: 'map',
+        // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+        style: 'mapbox://styles/benchspotters/clfb49goi00dd01mx4fxguzss',
+        center: [4.144318,51.015828],
+        zoom: 7
+    });
+
+    map.on('load', () => {
+        map.addSource('places', {
+            'type': 'geojson',
+            'data': {
+                'type': 'FeatureCollection',
+                'features': [
+                    {'type': 'Feature','properties': {'description':'<strong>BLES Buiten Leren en Spelen: GVB Centrumschool - Kuurne</strong><p>De verharde oppervlakte van 4400 m² wordt onderbroken door groene speeleilanden waar hemelwater kan infiltreren. Robuust, inheems (speel)groen zorgt voor een daling van hittestress. De ontharding en vergroening door onder meer de aanplanting van tientallen bomen en struiken en inzaaiing van bloemenweides sluiten aan op de bestaande groene assen in de gemeente. De groenzone rond de school wordt zo in oppervlakte verdubbeld.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/bles-buiten-leren-en-spelen-vlaanderen target="_blank">Meer info</a> </p>'},'geometry': {'type': 'Point','coordinates': [3.280713, 50.85129]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>BLES Buiten Leren en Spelen: De Sprankel - Mechelen</strong><p>De speelplaats van de Sprankel bestaat uit een verhard deel en een uitgedroogd grasveld. Op het verharde deel komt een boom met errond vaste planten en zitplaatsen. Naast de zandbak komt er een haag. Het grind onder een bestaande haag wordt vervangen door waterdoorlatende bodem zoals boomschors. De moestuin wordt opnieuw aangelegd in volle grond door de moestuinbakken en de onderstaande grind te verwijderen. Met bloemen en een insectenhotel worden bestuivers aangetrokken. </p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/bles-buiten-leren-en-spelen-vlaanderen target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [4.506520, 51.03248]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>BLES Buiten Leren en Spelen: VBS Markevallei - Herne</strong><p>De speelplaats (1290 m²) van GO! BS Markevallei bestaat uit 2/3 volledige verharding en 1/3 verdicht grasveld. Het streefdoel is om ¾ te ontharden (1000 m²) en alleen verharding over te houden voor balsporten en rechtstreekse toegangen. Het terrein wordt in zones onderverdeeld, afgebakend door groen. Er komt driedimensionaal groen met o.a. heuvels met klim-, klauter, slinger- en glijgelegenheid, verstopplaatsen, een fiets- en stepparcours, een water- en modderhoek, een bouwplaats, een rustige zit- en babbelhoek in vorm van een wilgenhut… Schaduwzones moeten in de zomer de temperatuur op de speelplaats en in de klaslokalen naar beneden halen.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/bles-buiten-leren-en-spelen-vlaanderen target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [4.071062, 50.71530]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>BLES Buiten Leren en Spelen: Sint-Michielsschool - Merelbeke</strong><p>Drie van de vier buitenruimtes van Sint-Michielsschool worden onthard. Een deel van de parking wordt ingericht als recreatieve ruimte voor buitensport (sportveldje met waterdoorlatende ondergrond) en -spel (spelprikkels die klimmen, klauteren en evenwicht bevorderen). De speelplaats voor de kleuters en die voor de lagereschoolkinderen wordt groen aangelegd met bestuiversvriendelijke, inheemse beplanting. De keuze voor beplanting met verschillende bloeiperiodes te nemen schept voor educatieve mogelijkheden.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/bles-buiten-leren-en-spelen-vlaanderen target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [3.758756, 51.01077]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>BLES Buiten Leren en Spelen: Atheneum Brasschaat - Antwerpen</strong><p>Het Atheneum Brasschaat gaat zowel zijn speelplaats als de omliggende groenperken klimaatvriendelijk inrichten. De speelplaats wordt eerst volledig onthard en alleen waar nodig wordt er opnieuw waterdoorlatende verharding gelegd. Er wordt gekozen voor inheemse, diverse planten.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/bles-buiten-leren-en-spelen-vlaanderen target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [4.494123, 51.29399]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Groenblauwe parels in de Zennevallei: Malleboot - Beersel</strong><p>Bij neerslag is het duidelijk waar water op de speelplaats van het kinderdagverblijf de Malleboot blijft staan. Deze plekken worden onthard zodat water in de bodem kan infiltreren. Daarna worden ze biodivers en speelvriendelijk ingericht.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/groenblauwe-parels-in-de-zennevallei-beersel-en-sint-pieters-leeuw target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [4.309473, 50.76672]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Groenblauwe parels in de Zennevallei: Ontharding publiek domein: straten en woonwijk Gravenhof - Beersel</strong><p>Veel kruispunten in Beersel zijn te ruim aangelegd. Door de nodige verharding tot een minimum terug te brengen, is er opnieuw ruimte voor waterinfiltratie en biodiversiteit. In totaal wordt er 2010 m² onthard in de zones Albert Denystraat, Ingedaellaan, Genstberg, Stoofstraat en Gravenhof.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/groenblauwe-parels-in-de-zennevallei-beersel-en-sint-pieters-leeuw target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [4.292186, 50.73418]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Groenblauwe parels in de Zennevallei: Jan Ruusbroecschool - Sint-Pieters-Leeuw </strong><p>De basisschool Jan Ruusbroecschool ligt in een gemeente die overstromingsgevoelig is. Daarom worden 3 zones van de verharde speelplaats onthard, dieper gelegd en vergroend. Vijf jaar geleden werden de eerste 2 eilandjes onthard en ingericht met siergras en houtsnippers. Deze worden vergroot, biodivers en duurzaam ingericht met speelgras.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/groenblauwe-parels-in-de-zennevallei-beersel-en-sint-pieters-leeuw target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [4.296281, 50.78613]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>GMF Groenblauwe parels voor Ekkergem: Balans</strong><p>De speelplaats van de school Balans wordt onthard en groenblauw ingericht. Er komen 3 nieuwe bomen: Tilia Cordata, een Alnus Cordata en een Carpinus Betulus. Hiervoor wordt de grond eronder onthard en ingezaaid met gras. De zone naast de gevels wordt onthard en ingericht met klimplanten, vaste planten, bolgewassen en lage struiken (o.a. plukfruit).</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/gmf-groenblauwe-parels-voor-ekkergem-gent target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [3.705993, 51.05218]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>GMF Groenblauwe parels voor Ekkergem: Coupure</strong><p>Na de succesvolle transformatie van de parking van de campus coupure naar een gezellige tuin in 2022, gaat de UGent nu de verharding rond blok A aanpakken. Aan de hoofdingang worden op het driehoekige plein de parkeerplaatsen en fietsenstalling onthard (behalve de laad- en losplaatsen en parkeerplaatsen voor gehandicapten)en).</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/gmf-groenblauwe-parels-voor-ekkergem-gent target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [3.708097, 51.05339]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>GMF Groenblauwe parels voor Ekkergem: Dunant</strong><p>Na het succesvolle project om een nieuwe tuin bij de kantine te ontwikkelen, pakt de campus Dunant nu zijn voortuin aan. De fietsstalling wordt verplaatst naar het studentenplein dat grenst aan het campusgebouw. Hierdoor kan de strook tussen de gevel en de straat volledig worden onthard en groenblauw worden ingericht.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/gmf-groenblauwe-parels-voor-ekkergem-gent target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [3.703763, 51.04887]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>GMF Groenblauwe parels voor Ekkergem: Corridors</strong><p>Als vervolg op het pilootproject Pieter Colpaertsteeg waar er 70 meter geveltuin werd aangelegd in 2021, wordt nu de volledige wijk Ekkergem aangepakt. Het stappenplan en het ideeënboekje van het pilootproject zijn de basis voor het draaiboek voor dit project. De bewoners zullen een geveltuin, groenslinger of klimplant aanbrengen aan hun woning. Per straat wordt er een plan uitgewerkt, rekening houdend met de ondergrondse leidingen. </p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/gmf-groenblauwe-parels-voor-ekkergem-gent target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [3.707518, 51.05431]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Banneux klimaatrobuust!: KC Mozaïek – vergroenen speelplaats </strong><p>De school KC Mozaïek heeft voor dit project haar kleuterspeelplaats onthard en groenblauw ingericht. Nu wordt de grotendeels verharde ingang met fietsenstalling van de lagere school aangepakt. In totaal is er een netto ontharding van 360 m². In de ontharde zones worden er verschillende biotopen aangelegd waarbij sommige meer worden betreden dan andere.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/banneux-klimaatrobuust-hasselt target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [5.346403, 50.94742]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Banneux klimaatrobuust!: Kindsheid Jesu – vergroenen speelplaats </strong><p>Op het terrein werden al hemelwaterputten geplaatst voor hergebruik van het water. De eerste overloop hiervan is een infiltratiegracht op het terrein. De tweede is het grasveld. Om meer water te capteren worden er op sommige plaatsen groendaken aangelegd en een basketbalterrein onthard. Zo zal er plaatselijk meer water infiltreren zodat de overlopen van de hemelwaterputten minder gebruikt moeten worden.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/banneux-klimaatrobuust-hasselt target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [5.345769, 50.95163]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Banneux klimaatrobuust!: vzw KIDS – vergroenen speelplaats </strong><p>Dit subproject kadert in een masterplan om de volledige campus van vzw KIDS te herstructureren en groener in te richten. Het water van de daken wordt al opgevangen in een wadi. Nu wil de campus de inkomzone en delen van de speelplaats van de basisschool ontharden.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/banneux-klimaatrobuust-hasselt target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [5.371090, 50.95050]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Banneux klimaatrobuust!: Corda Campus – verbinding naar Banneuxwijk </strong><p>Dit subproject kadert in het masterplan van een van de grootste bedrijvencampussen van Europa: Corda Campus. In het plan spelen groen, natuur, ecologie, duurzaamheid, waterinfiltratie en -buffering een grote rol.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/banneux-klimaatrobuust-hasselt target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [5.353599, 50.95109]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Banneux klimaatrobuust!: openbaar domein Banneuxwijk </strong><p>Veel wegen zijn te ruim aangelegd. Na een participatietraject wil de stad meer dan 1000 m² ontharden.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/banneux-klimaatrobuust-hasselt target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [5.356695, 50.94685]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Banneux klimaatrobuust!: private tuinen Banneuxwijk </strong><p>De stad wil de bewoners van de wijk Banneux aansporen om hun eigen tuin klimaatrobuust in te richten. Het doel is 200 huishoudens te overtuigen om minstens 5 m² te ontharden. Dit subproject wordt gefinancierd door de bewoners, maar de stad levert ondersteuning door tuinadvies, inspiratie voor hergebruik van materialen, ondersteuning bij ontharding en aanleg wadi’s, groepsaankoop ecologische planten en regentonnen... aan te bieden.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/banneux-klimaatrobuust-hasselt target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [5.351771, 50.94699]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Groenblauwe doorsteken: Trapstraat & parkkop - Duffel</strong><p>De Trapstraat wordt geknipt zodat ze een trage verbinding en groene veilige verblijfruimte wordt. De volledig verharde straat (2 brede rijstroken, parkeerstrook en beide kanten voetpad) wordt gereduceerd van 11,5 m naar 3 m met een uitwijkzone in waterdoorlatende verharding zodat kruisen voor tweerichtingsverkeer mogelijk blijft. De trapstraat wordt bestemd als woonerf. De toegangen naar woningen worden aangelegd in waterdoorlatende grasbetontegels. Het hemelwater van de verharding, en als dat mogelijk is ook van de omstaande woningen, wordt zoveel mogelijk bovengronds geïnfiltreerd in een lineaire beplante wadi.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/groenblauwe-doorsteken-duffel-en-heist-op-den-berg target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [4.511806, 51.09102]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Groenblauwe doorsteken: Toegangspoort UPC - Duffel</strong><p>De bestaande parking van de toegangspoort van het UPC (Universitair Psychiatrisch Centrum) Duffel wordt heringericht (1800 m²) als een groenblauw terrein met een biodiverse waterbuffer. Deze infiltreert het water van de overige verharding (inkom, toegangsweg en bestrating in waterdoorlatende ontharding) en het naastgelegen gebouw. De omliggende gebouwen worden dan ook afgekoppeld van hemelwater. De fietstoegang wordt gescheiden van ander vervoer voor de verkeersveiligheid.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/groenblauwe-doorsteken-duffel-en-heist-op-den-berg target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [4.493874, 51.09315]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Vergroening en ontharding in het Waasland: Ik zit in t groen en hou van - Temse</strong><p></p><p><a href=https://omgevingvlaanderen.paddlecms.net/nl/realisaties/vergroening-en-ontharding-in-het-waasland target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [4.215437, 51.12941]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Vergroening en ontharding in het Waasland: Ik wandel in t groen en ik hou van (groene ontsluiting Residentie Elisabeth) - Temse</strong><p></p><p><a href=https://omgevingvlaanderen.paddlecms.net/nl/realisaties/vergroening-en-ontharding-in-het-waasland target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [4.214583, 51.12831]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Vergroening en ontharding in het Waasland: Ontharding Idsteinlaan - Zwijndrecht</strong><p></p><p><a href=https://omgevingvlaanderen.paddlecms.net/nl/realisaties/vergroening-en-ontharding-in-het-waasland target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [4.343052, 51.20496]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Onthardingsprojecten Lubbeek: Linden Centrum</strong><p></p><p><a href=https://omgevingvlaanderen.paddlecms.net/nl/realisaties/onthardingsprojecten-3-pleinen-lubbeek target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [4.767485, 50.89556]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Onthardingsprojecten Lubbeek: Davidssquare</strong><p></p><p><a href=https://omgevingvlaanderen.paddlecms.net/nl/realisaties/onthardingsprojecten-3-pleinen-lubbeek target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [4.771275, 50.90387]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Onthardingsprojecten Lubbeek: Jeugdsquare</strong><p></p><p><a href=https://omgevingvlaanderen.paddlecms.net/nl/realisaties/onthardingsprojecten-3-pleinen-lubbeek target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [4.782360, 50.90577]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Groenblauwe parels Maldegem: Kleit Parelt</strong><p>Het nieuwe ontmoetingscentrum in het zuiden van het projectterrein komt er niet, omdat de locatie niet geschikt is voor verharding (overstromingsgevoelig gebied). In plaats daarvan komt er een groenblauwe onthaastingszone waar water van de aanpalende percelen kan worden gebufferd.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/groenblauwe-parels-maldegem target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [3.450570, 51.18056]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Groenblauwe parels Maldegem: Donk Parelt</strong><p>Het ontmoetingscentrum van Donk wordt volledig aangepakt. Er verdwijnen 18 parkeerplaatsen, de andere plaatsen worden in waterdoorlatende ontharding heraangelegd en er worden 2 klaslokalen afgebroken die in het bestaande gebouw worden geïntegreerd. Ongeveer 30% van het terrein wordt onthard en het plaatselijke gevallen hemelwater wordt 100% geïnfiltreerd.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/groenblauwe-parels-maldegem target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [3.384711, 51.21336]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Groenblauwe parels Maldegem: Parelen voor school en buurt</strong><p>Dit subproject bestaat uit 2 delen. In het eerste deel wordt een groot deel van de 2 speelplaatsen van GO! De Driesprong onthard. In deel 2 van dit subproject zal de waterloop ‘De Begijnewatergang’ in het aanpalende perceel in eigendom van de gemeente opnieuw worden opengelegd, hermeanderd en een natuurlijke zachte oever worden gegeven.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/groenblauwe-parels-maldegem target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [3.453600, 51.20879]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Heuvel, flank, vallei - spelen hoort erbij!: De Wijnpers</strong><p>De Wijnpers is een secundaire school met veel natuur en tuin gerelateerde studierichtingen. In het verleden is er zo min mogelijk verharding aangelegd. Er wordt in dit project dan ook maar 150 m² onthard, maar het doel is vooral om de campus hemelwaterneutraal te maken.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/heuvel-flank-vallei-spelen-hoort-erbij-leuven target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [4.689759, 50.88706]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Heuvel, flank, vallei - spelen hoort erbij!: Heilig Hart Instituut</strong><p>Deze school ligt op een heuvel op het plateau naast de vallei van de Bukenbeek. Momenteel loopt het water van de lagere school via de sportvelden en de speelplaats van de secundaire school naar de Hertogstraat. Ook op de speelplaats van de kleuterschool is er vaak plasvorming. Hier worden kleine wadigrachten aangelegd en wordt de vloer van de zitput vervangen in waterdoorlatend materiaal.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/heuvel-flank-vallei-spelen-hoort-erbij-leuven target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [4.699782, 50.85644]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Heuvel, flank, vallei - spelen hoort erbij!: Redingenhof</strong><p>De school ligt in de vallei van de Dijle en ligt in overstromingsgevoelig gebied. Toch blijft infiltratie mogelijk door het diepgelegen grondwater dat wordt gemonitord met peilbuizen. Daarom worden de zones waar plasvorming is, onthard.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/heuvel-flank-vallei-spelen-hoort-erbij-leuven target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [4.693657, 50.87306]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Ontharding in de groene rand rond Leuven: Sint-Kamillus: grijs kerkhof wordt groene rustzone - Bierbeek</strong><p>Naast de campus Bierbeek van de zorggroep Sint-Kamillus bevindt zich een oud kerkhof. De kiezelpaden van het kerkhof worden vervangen door graspaden en enkele oude graven worden verwijderd. Alleen het centrale pad is, voor de toegankelijkheid, in waterdoorlatende verharding heraangelegd.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/ontharding-in-de-groene-rand-rond-leuven-regio-leuven target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [4.751155, 50.85193]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Ontharding in de groene rand rond Leuven: Basisschool Heilig Hart Oud-Heverlee: ontharding en vergroening speelplaats - Oud-Heverlee</strong><p>De basisschool ‘Heilig Hart’ onthardt 2 eilanden op haar speelplaats. Het grootste wordt ingericht als avontuurlijke speelwildernis met speelheuvels, beplante wadi’s, struikbosjes en schaduwbomen. Een deel wordt ingezaaid met bloemenweidemengsel, een andere deel wordt beplant met inheemse struiken.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/ontharding-in-de-groene-rand-rond-leuven-regio-leuven target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [4.665635, 50.83627]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Ontharding in de groene rand rond Leuven: GO! De Nova: ontharding en vergroening speelplaatsen basis en middelbaar - Kessel-lo</strong><p>Naast de 1300 m² die onthard en groenblauw wordt ingericht op de speelplaats van de school ‘De Nova’, zal er ook 900 m² verharding heraangelegd worden met waterdoorlatende verharding. Het oude gebouw en parking worden vervangen door een compacte nieuwbouw.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/ontharding-in-de-groene-rand-rond-leuven-regio-leuven target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [4.737340, 50.88400]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Ontharding in de groene rand rond Leuven: Voetbalclub Stormvogels Haasrode: parking wordt groene publieke ruimte - Oud-Heverlee</strong><p>Het gebouw van de voetbalclub ‘Stormvogels’ wordt compact herbouwd, waardoor er meer ruimte voor groen ontstaat. De omliggende verharding wordt tot een minimum herleid. Zo wordt de verharde parking verwijderd.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/ontharding-in-de-groene-rand-rond-leuven-regio-leuven target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [4.723132, 50.81870]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Ontharding in de groene rand rond Leuven: Zoet Water: groenblauwe herinrichting recreatiesite - Oud-Heverlee</strong><p>Het jeugdhuis JooW ligt in een groot recreatiedomein ‘Zoet Water’. Van de betonvlakte rond het jeugdhuis wordt de helft (1185 m²) groen ingericht. Daarnaast komt er een skatepark, een evenementenzone met grindgazon, een waterdoorlatend sportveld en groenbestrating.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/ontharding-in-de-groene-rand-rond-leuven-regio-leuven target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [4.656954, 50.82324]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Ontharding in de groene rand rond Leuven: Kleuterschool De Kraal Centrum: ontharding en vergroeining speelplaats - Herent</strong><p>Een zone van de speelplaats van de kleuterschool ‘De Kraal’ wordt onthard en ingericht met speelnatuur en infiltratiestroken met grindkoffers aangeplant met vaste planten. Dat zorgt voor zonering, verstopplekjes en speelmogelijkheden in elk seizoen: speelheuvels, struikbosjes, hagen en wilgenconstructie.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/ontharding-in-de-groene-rand-rond-leuven-regio-leuven target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [4.670806, 50.90694]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Op avontuur in groenblauwe schoolnatuur: Zevensprong - Dessel </strong><p>De school ‘de Zevensprong’ wil 100% van het hemelwater infiltreren of capteren op eigen terrein om lange(re) droogteperiodes te overbruggen.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/op-avontuur-in-groenblauwe-schoolnatuur-dessel-en-balen target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [5.118352, 51.23785]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Op avontuur in groenblauwe schoolnatuur: Klimboom - Balen</strong><p>De school wil 100% van het hemelwater op de speelplaats infiltreren en 75% van het hemelwater dat op de daken valt, capteren op eigen terrein.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/op-avontuur-in-groenblauwe-schoolnatuur-dessel-en-balen target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [5.164233, 51.17337]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Op avontuur in groenblauwe schoolnatuur: Curieuzeneuzen - Balen</strong><p>De school wil 75% van het hemelwater infiltreren of capteren op eigen terrein, om lange(re) droogteperiodes overbruggen.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/op-avontuur-in-groenblauwe-schoolnatuur-dessel-en-balen target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [5.164927, 51.17247]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>3 Groenblauwe Parels Sint-Niklaas: Dit plein is klimaatrobust</strong><p>Er komt 1 groot plantvak op de Houtbriel met inheemse, streekeigen, bestuiversvriendelijke begroeiing met aangename geuren en kleuren zoals vaste planten, struiken en bomen. Aan de achterkant van het Sint-Nicolaasplein komen 11 plantvakken met gelijkaardig beplanting.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/3-groenblauwe-parels-sint-niklaas target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [4.141995, 51.16500]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>4 Groenblauwe Parels Sint-Niklaas: Deze school is klimaatrobust</strong><p>De school ‘Forum Da Vinci’ heeft 3 speelplaatsen en 1 parking die worden onthard en vergroend. Er komen inheemse, streekeigen, bestuiversvriendelijke vaste planten met aangename geuren en kleuren, aangevuld met wintergroene bodembedekkers en planten die tegen een stootje kunnen.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/3-groenblauwe-parels-sint-niklaas target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [4.150058, 51.15809]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>5 Groenblauwe Parels Sint-Niklaas: Deze sportclub is klimaatrobust</strong><p>De sportclub ‘Kracht en Geduld’ wil 2 koeren en een parking klimaatrobuust inrichten.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/3-groenblauwe-parels-sint-niklaas target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [4.151458, 51.16788]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Na(b/t)uurschap: Binnengebied Ernest Staesstraat - Edegem</strong><p>In het midden van het bouwblok tussen de Ernest Staesstraat en de Beekstraat ligt er een totaal verharde onbenutte ruimte tussen de tuinen. Die wordt onthard en vergroend en een wadi moet zorgen voor een betere waterhuishouding.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/nabtuurschap-provincie-antwerpen target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [4.439110, 51.16913]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Na(b/t)uurschap: Egelsvennen - Mol</strong><p>De centrale weg, een aantal voetpaden en opritten van de sociale verouderde wijk Egelsvennen worden onthard en vergroend. Regenwaterpijpen worden afgekoppeld zodat het regenwater kan infiltreren in de tuinen.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/nabtuurschap-provincie-antwerpen target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [5.109735, 51.20182]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Na(b/t)uurschap: Vorstsebaan - Laakdal </strong><p>Op de Vorstsebaan wordt de verharde ‘koer’ tussen de garages en woningen 6 en 8 onthard. Er wordt onderzocht of de garages kunnen worden gesloopt en vervangen door inheems groen.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/nabtuurschap-provincie-antwerpen target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [4.987710, 51.07111]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Klimaatspeelplaatsen: Kleuterschool</strong><p>De verharding van de kleuterspeelplaats wordt verwijderd en de ondergrond wordt waterdoorlatend gemaakt om zoveel mogelijk water te infiltreren.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/klimaatspeelplaatsen-aalbeke-kortrijk target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [3.228648, 50.77824]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Klimaatspeelplaatsen: Lagere school</strong><p>De stenen speelplaats van de lagere school ligt naast de kleuterspeelplaats. Deze wordt ook onthard en de tegels worden hergebruikt om een arena aan te leggen.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/klimaatspeelplaatsen-aalbeke-kortrijk target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [3.227871, 50.77854]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Klimaatspeelplaatsen: Wijkschool</strong><p>De wijkschool (op een andere locatie gelegen dan de andere subprojecten) heeft een volledig verharde speelplaats tussen hoge muren. 1 kant van de muur is al groen begroeid. Nu wordt ook de helft van het terrein onthard en vergroend met inheemse bomen en groen.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/klimaatspeelplaatsen-aalbeke-kortrijk target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [3.224019, 50.76928]}},
+                  
+{'type': 'Feature','properties': {'description':'<strong>Klimaatspeelplaatsen: Kloostertuin</strong><p>Hier wordt ingezet op het verhogen van de biodiversiteit. Er wordt gewerkt met wilde bloemenweides, bijenkorven en bestuiversvriendelijke planten.</p><p><a href=https://omgeving.vlaanderen.be/nl/realisaties/klimaatspeelplaatsen-aalbeke-kortrijk target="_blank">Meer info</a></p>'},'geometry': {'type': 'Point','coordinates': [3.226924, 50.77831]}}
+
+
+                ]
+            }
+        });
+        // Add a layer showing the places.
+        map.addLayer({
+            'id': 'places',
+            'type': 'circle',
+            'source': 'places',
+            'paint': {
+                'circle-opacity': 0,
+                'circle-stroke-width': 0,
+                'circle-stroke-color': '#4f3d5a'
+            }
+        });
+
+        // Create a popup, but don't add it to the map yet.
+        const popup = new mapboxgl.Popup({
+            closeButton: true,
+            closeOnClick: true
+        });
+
+        map.on('click', 'places', (e) => {
+            // Change the cursor style as a UI indicator.
+            map.getCanvas().style.cursor = 'pointer';
+
+            // Copy coordinates array.
+            const coordinates = e.features[0].geometry.coordinates.slice();
+            const description = e.features[0].properties.description;
+
+            // Ensure that if the map is zoomed out such that multiple
+            // copies of the feature are visible, the popup appears
+            // over the copy being pointed to.
+            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+            }
+
+            // Populate the popup and set its coordinates
+            // based on the feature found.
+            popup.setLngLat(coordinates).setHTML(description).addTo(map);
+        });
+
+    });
+
+// Center the map on the coordinates of any clicked circle from the 'circle' layer.
+map.on('click', 'places', (e) => {
+map.flyTo({
+center: e.features[0].geometry.coordinates, zoom:15
+});
+});
+
+map.addControl(new mapboxgl.FullscreenControl());
+
+map.addControl(new mapboxgl.NavigationControl());
